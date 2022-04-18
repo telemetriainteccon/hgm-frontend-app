@@ -1,0 +1,19 @@
+.report-table{
+    margin-top: 30px;
+    /* width: 100%; */
+    max-width: 1040px;
+    text-align: center;
+}
+
+.report-table, th, td {
+    border: 1px solid black;
+    font-size: 14px;
+  }
+
+  .report-table th {
+    border: 1px solid black;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+  }

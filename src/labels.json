@@ -1,0 +1,658 @@
+[
+  {
+    "id": "0",
+    "name": "SELECCIONAR AREA"
+  },
+  {
+    "id": "1",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Bodega de material medico quirurgico 1 [TS-S][ID:1]"
+  },
+  {
+    "id": "2",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Bodega de material medico quirurgico 2 [TS-S][ID:2]"
+  },
+  {
+    "id": "3",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Nevera de material medico quirurgico [TS-S][ID:3]"
+  },
+  {
+    "id": "4",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Bodega farmacia [TS-S][ID:4]"
+  },
+  {
+    "id": "5",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Nevera thermo triple [TS-S][ID:5]"
+  },
+  {
+    "id": "6",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Area de reempaque [TS-S][ID:6]"
+  },
+  {
+    "id": "7",
+    "name": "SERVICIO FARMACIA SOTANO (SOTANO) Area de reemvase [TS-S][ID:7]"
+  },
+  {
+    "id": "8",
+    "name": "SERVICIO ENSAYOS CLINICOS (SOTANO) Area bodega investigacion farmacia [TS-S][ID:8]"
+  },
+  {
+    "id": "9",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Area Central de mezclas Nutricion parenteral [TS-P1][ID:9]"
+  },
+  {
+    "id": "10",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Area central de mezclas Oncologia [TS-P1][ID:10]"
+  },
+  {
+    "id": "11",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Area central de mezclas Medicamentos [TS-P1][ID:11]"
+  },
+  {
+    "id": "12",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Nevera central de mezclas [TS-P1][ID:12]"
+  },
+  {
+    "id": "13",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Nevera thermo doble (farmacia central) [TS-P1][ID:13]"
+  },
+  {
+    "id": "14",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Nevera venta al publico [TS-P1][ID:14]"
+  },
+  {
+    "id": "15",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Area venta al publico [TS-P1][ID:15]"
+  },
+  {
+    "id": "16",
+    "name": "SERVICIO FARMACIA CENTRAL (SUR 1 PISO) Area farmacia central [TS-P1][ID:16]"
+  },
+  {
+    "id": "17",
+    "name": "SERVICIO FARMACIA URGENCIAS (SUR 1 PISO) Nevera Farmacia Urgencias [TS-P1][ID:17]"
+  },
+  {
+    "id": "18",
+    "name": "SERVICIO FARMACIA URGENCIAS (SUR 1 PISO) Area Farmacia Urgencias [TS-P1][ID:18]"
+  },
+  {
+    "id": "19",
+    "name": "SERVICIO FARMACIA IMAGENOLOGIA (NORTE 1 PISO) Nevera Farmacia Imagenologia [TN-P1][ID:19]"
+  },
+  {
+    "id": "20",
+    "name": "SERVICIO FARMACIA IMAGENOLOGIA (NORTE 1 PISO) Area Farmacia Urgencias Imagenologia [TN-P1][ID:20]"
+  },
+  {
+    "id": "21",
+    "name": "SERVICIO FARMACIA CIRUGIA (NORTE 2 PISO) Area Farmacia Cirugia [TN-P2][ID:21]"
+  },
+  {
+    "id": "22",
+    "name": "SERVICIO FARMACIA CIRUGIA (NORTE 2 PISO) Nevera Farmacia Cirugia [TN-P2][ID:22]"
+  },
+  {
+    "id": "23",
+    "name": "SERVICIO FARMACIA CIRUGIA (NORTE 2 PISO) Congelador Farmacia Cirugia [TN-P2][ID:23]"
+  },
+  {
+    "id": "24",
+    "name": ""
+  },
+  {
+    "id": "25",
+    "name": ""
+  },
+  {
+    "id": "26",
+    "name": ""
+  },
+  {
+    "id": "27",
+    "name": ""
+  },
+  {
+    "id": "28",
+    "name": "SERVICIO TANQUES DE AGUA CALIENTE (NORTE 11 PISO) (SUR 10 PISO) Temperatura Tanque Torre Norte [TN-P11][ID:28]"
+  },
+  {
+    "id": "29",
+    "name": "SERVICIO TANQUES DE AGUA CALIENTE (NORTE 11 PISO) (SUR 10 PISO) Temperatura Tanque Torre Sur [TS-P10][ID:29]"
+  },
+  {
+    "id": "30",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Bodega Insumos [TS-P2][ID:30]"
+  },
+  {
+    "id": "31",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Centridugas [TS-P2][ID:31]"
+  },
+  {
+    "id": "32",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Pruebas Biologicas [TS-P2][ID:32]"
+  },
+  {
+    "id": "33",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Hemaferesis [TS-P2][ID:33]"
+  },
+  {
+    "id": "34",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Recepcion Donantes [TS-P2][ID:34]"
+  },
+  {
+    "id": "35",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Extraccion De Sangre [TS-P2][ID:35]"
+  },
+  {
+    "id": "36",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Area Almacenamiento (congeladores)[TS-P2][ID:36]"
+  },
+  {
+    "id": "37",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Nevera Cava de Refrigeracion [TS-P2][ID:37]"
+  },
+  {
+    "id": "38",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Nevera Revco 3 [TS-P2][ID:38]"
+  },
+  {
+    "id": "39",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Thermo 2 [TS-P2][ID:39]"
+  },
+  {
+    "id": "40",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Revco 5 [TS-P2][ID:40]"
+  },
+  {
+    "id": "41",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Thermo 3 [TS-P2][ID:41]"
+  },
+  {
+    "id": "42",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Nevera Harris [TS-P2][ID:42]"
+  },
+  {
+    "id": "43",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Nevera Thermo 1 [TS-P2][ID:43]"
+  },
+  {
+    "id": "44",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Revco 4 [TS-P2][ID:44]"
+  },
+  {
+    "id": "45",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Nevera Thermo reactivos [TS-P2][ID:45]"
+  },
+  {
+    "id": "46",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Nevera Revco 2 [TS-P2][ID:46/162]"
+  },
+  {
+    "id": "47",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Thermo 4 [TS-P2][ID:47]"
+  },
+  {
+    "id": "48",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Thermo 6 [TS-P2][ID:48]"
+  },
+  {
+    "id": "49",
+    "name": "SERVICIO BANCO DE SANGRE (SUR 2 PISO) Congelador Thermo 1 [TS-P2][ID:49]"
+  },
+  {
+    "id": "50",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Bodega de Laboratorio [TS-P2][ID:50]"
+  },
+  {
+    "id": "51",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Toma de Muestras [TS-P2][ID:51]"
+  },
+  {
+    "id": "52",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Quimica [TS-P2][ID:52]"
+  },
+  {
+    "id": "53",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Microbacterias [TS-P2][ID:53]"
+  },
+  {
+    "id": "54",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area IPCAH [TS-P2][ID:54]"
+  },
+  {
+    "id": "55",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Hematologia [TS-P2][ID:55]"
+  },
+  {
+    "id": "56",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Recepcion De Preparacion De Muestras [TS-P2][ID:56]"
+  },
+  {
+    "id": "57",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Nevera IPCAH [TS-P2][ID:57]"
+  },
+  {
+    "id": "58",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Congelador IPCAH [TS-P2][ID:58]"
+  },
+  {
+    "id": "59",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Nevera Quimica [TS-P2][ID:59]"
+  },
+  {
+    "id": "60",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Congelador Quimica [TS-P2][ID:60]"
+  },
+  {
+    "id": "61",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Congelador Thermo bodega [TS-P2][ID:61]"
+  },
+  {
+    "id": "62",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Ultracongelador Mycobacterias [TS-P2][ID:62]"
+  },
+  {
+    "id": "63",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Microbiologia [TS-P2][ID:63]"
+  },
+  {
+    "id": "64",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Microbiologia 2 [TS-P2][ID:64]"
+  },
+  {
+    "id": "65",
+    "name": "SERVICIO ENSAYOS CLINICOS (SOTANO) Nevera Bodega Investigacion Farmacia [TS-S][ID:65]"
+  },
+  {
+    "id": "66",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Nevera Selecta Muestras [TS-P2][ID:66]"
+  },
+  {
+    "id": "67",
+    "name": "SERVICIO ENSAYOS CLINICOS (SUR 7 PISO) Congelador Ensayos Clinicos [TS-P7][ID:67]"
+  },
+  {
+    "id": "68",
+    "name": "SERVICIO DE LABORATORIO CLINICO (SUR 2 PISO) Area Almacenamiento Sustancias Quimicas [TS-P2][ID:68]"
+  },
+  {
+    "id": "69",
+    "name": "SERVICIO PATOLOGIA (SUR 2 PISO) Nevera Laboratorio Patologia [TS-P2][ID:69]"
+  },
+  {
+    "id": "70",
+    "name": "SERVICIO DE UCI PEDIATRICA (SUR 9 PISO) Nevera Medicamentos [TS-P9][ID:70]"
+  },
+  {
+    "id": "71",
+    "name": "SERVICIO DE UCI PEDIATRICA (SUR 9 PISO) Nevera Teteros [TS-P9][ID:71]"
+  },
+  {
+    "id": "72",
+    "name": "SERVICIO DE UCI PEDIATRICA (SUR 9 PISO) Area Puesto De Enfermeria (Quimicos, Dispositivos Medicos, Carro De Paros) [TS-P9][ID:72]"
+  },
+  {
+    "id": "73",
+    "name": "SERVICIO DE UCI PEDIATRICA (SUR 9 PISO) Area Cuarto De Medicamentos [TS-P9][ID:73]"
+  },
+  {
+    "id": "74",
+    "name": "SERVICIO UCI C (SUR 9 PISO) Nevera Medicamentos [TS-P9][ID:74]"
+  },
+  {
+    "id": "75",
+    "name": "SERVICIO UCI C (SUR 9 PISO) Area Puesto De Enfermeria (Quimicos, Dispositivos Medicos, Carro De Paros) [TS-P9][ID:75]"
+  },
+  {
+    "id": "76",
+    "name": "SERVICIO DE UCE (SUR 9 PISO) Nevera Medicamentos [TS-P9][ID:76]"
+  },
+  {
+    "id": "77",
+    "name": "SERVICIO DE UCE (SUR 9 PISO) Area Puesto De Enfermeria (Quimicos, Dispositivos Medicos, Carro De Paros) [TS-P9][ID:77]"
+  },
+  {
+    "id": "78",
+    "name": "SERVICIO HOSPITALIZACION (SUR 8 PISO) Nevera Medicamentos [TS-P8][ID:78]"
+  },
+  {
+    "id": "79",
+    "name": "SERVICIO HOSPITALIZACION (SUR 8 PISO) Area Puesto De Enfermeria (Carro De Paros) [TS-P8][ID:79]"
+  },
+  {
+    "id": "80",
+    "name": "SERVICIO ENSAYOS CLINICOS (SUR 7 PISO) Area Archivo Ensayos Clinicos [TS-P7][ID:80]"
+  },
+  {
+    "id": "81",
+    "name": "SERVICIO ENSAYOS CLINICOS (SUR 7 PISO) Area Bodega Insumos de Laboratorio Ensayos Clinicos [TS-P7][ID:81]"
+  },
+  {
+    "id": "82",
+    "name": "SERVICIO ENSAYOS CLINICOS (SUR 7 PISO) Congelador Ultracongelador [TS-P7][ID:82]"
+  },
+  {
+    "id": "83",
+    "name": "SERVICIO HOSPITALIZACION (SUR 6 PISO) Area Puesto De Enfermeria (Carro De Paros, Material Esteril, Insumos Laboratorio) [TS-P6][ID:83]"
+  },
+  {
+    "id": "84",
+    "name": "SERVICIO HOSPITALIZACION (SUR 6 PISO) Nevera De Medicamentos [TS-P6][ID:84]"
+  },
+  {
+    "id": "85",
+    "name": ""
+  },
+  {
+    "id": "86",
+    "name": "SERVICIO HOSPITALIZACION (SUR 5 PISO) Area Puesto De Enfermeria (Carro De Paros, Material Esteril) [TS-P5][ID:86]"
+  },
+  {
+    "id": "87",
+    "name": "SERVICIO HOSPITALIZACION (SUR 5 PISO) Nevera De Medicamentos [TS-P5][ID:87]"
+  },
+  {
+    "id": "88",
+    "name": "SERVICIO HOSPITALIZACION (SUR 5 PISO) Nevera Teteros [TS-P5][ID:88]"
+  },
+  {
+    "id": "89",
+    "name": "SERVICIO HOSPITALIZACION (SUR 4 PISO) Area Puesto De Enfermeria (Carro De Paros, Material Esteril) [TS-P4][ID:89]"
+  },
+  {
+    "id": "90",
+    "name": "SERVICIO HOSPITALIZACION (SUR 4 PISO) Nevera De Medicamentos [TS-P4][ID:90]"
+  },
+  {
+    "id": "91",
+    "name": "SERVICIO HOSPITALIZACION (SUR 4 PISO) Nevera Teteros [TS-P4][ID:91]"
+  },
+  {
+    "id": "92",
+    "name": "SERVICIO CENTRAL DE ESTERILIZACION (NORTE 3 PISO) Area Almacen Central de Esterilizacion [TN-P3][ID:92]"
+  },
+  {
+    "id": "93",
+    "name": "SERVICIO HOSPITALIZACION PREESCOLARES (NORTE 3 PISO) Area Puesto De Enfermeria (Carro De Paros, Material Esteril) [TN-P3][ID:93]"
+  },
+  {
+    "id": "94",
+    "name": "SERVICIO HOSPITALIZACION PREESCOLARES (NORTE 3 PISO) Nevera De Medicamentos [TN-P3][ID:94]"
+  },
+  {
+    "id": "95",
+    "name": "SERVICIO HOSPITALIZACION PREESCOLARES (NORTE 3 PISO) Nevera Teteros [TN-P3][ID:95]"
+  },
+  {
+    "id": "96",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Congelador 1 [TS-P3][ID:96]"
+  },
+  {
+    "id": "97",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Congelador 2 [TS-P3][ID:97]"
+  },
+  {
+    "id": "98",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Congelador 3 [TS-P3][ID:98]"
+  },
+  {
+    "id": "99",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Congelador 4 [TS-P3][ID:99]"
+  },
+  {
+    "id": "100",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Nevera Sala De Extraccion [TS-P3][ID:100]"
+  },
+  {
+    "id": "101",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Area Pasteurizacion [TS-P3][ID:101]"
+  },
+  {
+    "id": "102",
+    "name": "SERVICIO BANCO DE LECHE (SUR 3 PISO) Nevera Area De Control De Microbiologia [TS-P3][ID:102]"
+  },
+  {
+    "id": "103",
+    "name": "SERVICIO NEONATOS CAM 46-57 (SUR 3 PISO) Nevera De Medicamentos [TS-P3][ID:103]"
+  },
+  {
+    "id": "104",
+    "name": "SERVICIO UCI NEONATOS (SUR 3 PISO) Area Cuarto Limpio (Sustancias Quimicas, Stock Medicamentos, Material Esteril) [TS-P3][ID:104]"
+  },
+  {
+    "id": "105",
+    "name": "SERVICIO UCI NEONATOS (SUR 3 PISO) Area Neonatos Puesto de enfermeria (Sustancias Quimicas, Stock Medicamentos, Material Esteril) [TS-P3][ID:105]"
+  },
+  {
+    "id": "106",
+    "name": "SERVICIO UCI NEONATOS (SUR 3 PISO) Area Uci Neonatos [TS-P3][ID:106]"
+  },
+  {
+    "id": "107",
+    "name": "SERVICIO UCI NEONATOS (SUR 3 PISO) Nevera Medicamentos (Uci Neonatos Nueva Cuarto Limpio) [TS-P3][ID:107]"
+  },
+  {
+    "id": "108",
+    "name": "SERVICIO UCI NEONATOS (SUR 3 PISO) Nevera De Medicamentos [TS-P3][ID:108]"
+  },
+  {
+    "id": "109",
+    "name": "SERVICIO CENTRO DE DISTRIBUCION DE LECHE LACTARIO (SUR 3 PISO) Nevera Preparacion De Formulas [TS-P3][ID:109]"
+  },
+  {
+    "id": "110",
+    "name": "SERVICIO CENTRO DE DISTRIBUCION DE LECHE LACTARIO (SUR 3 PISO) Nevera (Tecnifrio Doble) [TS-P3][ID:110]"
+  },
+  {
+    "id": "111",
+    "name": "SERVICIO CENTRO DE DISTRIBUCION DE LECHE LACTARIO (SUR 3 PISO) Congelador Tecnifrio [TS-P3][ID:111]"
+  },
+  {
+    "id": "112",
+    "name": "SERVICIO UCI ADULTOS B (SUR 2 PISO) Nevera De Medicamentos [TS-P2][ID:112]"
+  },
+  {
+    "id": "113",
+    "name": "SERVICIO UCI ADULTOS A (SUR 2 PISO) Nevera De Medicamentos [TS-P2][ID:113]"
+  },
+  {
+    "id": "114",
+    "name": "SERVICIO UCI ADULTOS A (SUR 2 PISO) Area Puesto De Enfermeria (Carro De Paros, Material Esteril) [TS-P2][ID:114]"
+  },
+  {
+    "id": "115",
+    "name": "SERVICIO DE URGENCIAS (SUR 1 PISO) Area Sala De Reanimacion Urgencias (Carro De Paros) [TS-P1][ID:115]"
+  },
+  {
+    "id": "116",
+    "name": "SERVICIO DE URGENCIAS (SUR 1 PISO) Area Sala Fastrack (Carro De Paros) [TS-P1][ID:116]"
+  },
+  {
+    "id": "117",
+    "name": "SERVICIO DE URGENCIAS (SUR 1 PISO) Area Sala SAI (Carro De Paros) [TS-P1][ID:117]"
+  },
+  {
+    "id": "118",
+    "name": "SERVICIO DE URGENCIAS (SUR 1 PISO) Area Observacion Sur (Carro De Paros) [TS-P1][ID:118]"
+  },
+  {
+    "id": "119",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 1 [TN-P2][ID:119]"
+  },
+  {
+    "id": "120",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 2 [TN-P2][ID:120]"
+  },
+  {
+    "id": "121",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 3 [TN-P2][ID:121]"
+  },
+  {
+    "id": "122",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 4 [TN-P2][ID:122]"
+  },
+  {
+    "id": "123",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 5 [TN-P2][ID:123]"
+  },
+  {
+    "id": "124",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 6 [TN-P2][ID:124]"
+  },
+  {
+    "id": "125",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 7 [TN-P2][ID:125]"
+  },
+  {
+    "id": "126",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Quirofano 8 [TN-P2][ID:126]"
+  },
+  {
+    "id": "127",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Cuarto De Equipos [TN-P2][ID:127]"
+  },
+  {
+    "id": "128",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Cuarto Entre Quirofanos 5 y 6 [TN-P2][ID:128]"
+  },
+  {
+    "id": "129",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Congelador Residuos Cirugia [TN-P2][ID:129]"
+  },
+  {
+    "id": "130",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Nevera Cirugia Cardiologia [TN-P2][ID:130]"
+  },
+  {
+    "id": "131",
+    "name": "SERVICIO CIRUGIA (NORTE 2 PISO) Area Ambiente Recuperacion [TN-P2][ID:131]"
+  },
+  {
+    "id": "132",
+    "name": "SERVICIO GINECOBSTETRICIA (SUR 2 PISO) Area Sala De Partos 1 [TS-P2][ID:132]"
+  },
+  {
+    "id": "133",
+    "name": "SERVICIO GINECOBSTETRICIA (SUR 2 PISO) Area Sala De Partos 2 [TS-P2][ID:133]"
+  },
+  {
+    "id": "134",
+    "name": "SERVICIO GINECOBSTETRICIA (SUR 2 PISO) Area Sala De Partos 3 [TS-P2][ID:134]"
+  },
+  {
+    "id": "135",
+    "name": "SERVICIO GINECOBSTETRICIA (SUR 2 PISO) Congelador De Placentas [TS-P2][ID:135]"
+  },
+  {
+    "id": "136",
+    "name": "SERVICIO GINECOBSTETRICIA (SUR 2 PISO) Congelador Custodia [TS-P2][ID:136]"
+  },
+  {
+    "id": "137",
+    "name": "SERVICIO GINECOBSTETRICIA (SUR 2 PISO) Nevera Ginecobstetricia Teteros [TS-P2][ID:137]"
+  },
+  {
+    "id": "138",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 9 PISO) Area Carro De Paros Cuarto De Equipos (Cilindros De Oxigeno) [TN-P9][ID:138]"
+  },
+  {
+    "id": "139",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 9 PISO) Nevera De Medicamentos [TN-P9][ID:139]"
+  },
+  {
+    "id": "140",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 8 PISO) Area Carro De Paros Cuarto De Equipos (Cilindros De Oxigeno) [TN-P8][ID:140]"
+  },
+  {
+    "id": "141",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 8 PISO) Nevera De Medicamentos [TN-P8][ID:141]"
+  },
+  {
+    "id": "142",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 7 PISO) Area Carro De Paros Cuarto De Equipos (Cilindros De Oxigeno) [TN-P7][ID:142]"
+  },
+  {
+    "id": "143",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 7 PISO) Nevera De Medicamentos 1 (Nutriciones Enterales y Ampolletas) [TN-P7][ID:143]"
+  },
+  {
+    "id": "144",
+    "name": ""
+  },
+  {
+    "id": "145",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 6 PSIO) Area Carro De Paros Cuarto De Equipos (Cilindros De Oxigeno) [TN-P6][ID:145]"
+  },
+  {
+    "id": "146",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 6 PSIO) Nevera De Medicamentos [TN-P6][ID:146]"
+  },
+  {
+    "id": "147",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 5 PISO) Area Carro De Paros Cuarto De Equipos (Cilindros De Oxigeno) [TN-P5][ID:147]"
+  },
+  {
+    "id": "148",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 5 PISO) Nevera De Medicamentos 1 (Nutriciones Enterales y Ampolletas) [TN-P5][ID:148]"
+  },
+  {
+    "id": "149",
+    "name": ""
+  },
+  {
+    "id": "150",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 4 PISO) Area Carro De Paros Cuarto De Equipos (Cilindros De Oxigeno) [TN-P4][ID:150]"
+  },
+  {
+    "id": "151",
+    "name": "SERVICIO HOSPITALIZACION (NORTE 4 PISO) Nevera De Medicamentos [TN-P4][ID:151]"
+  },
+  {
+    "id": "152",
+    "name": "SERVICIO DE IMAGENOLOGIA (NORTE 1 PISO) Area Recuperacion (Carro De Paros) [TN-P1][ID:152]"
+  },
+  {
+    "id": "153",
+    "name": "SERVICIO DE IMAGENOLOGIA (NORTE 1 PISO) Area Duodiagnost [TN-P1][ID:153]"
+  },
+  {
+    "id": "154",
+    "name": "SERVICIO DE IMAGENOLOGIA (NORTE 1 PISO) Area Angiografo Toshiba Carro De Paros [TN-P1][ID:154]"
+  },
+  {
+    "id": "155",
+    "name": "SERVICIO DE IMAGENOLOGIA (NORTE 1 PISO) Area Multidiagnost (Carro De Paros) [TN-P1][ID:155]"
+  },
+  {
+    "id": "156",
+    "name": "SERVICIO DE IMAGENOLOGIA (NORTE 1 PISO) Area Angiofrafo Phillips [TN-P1][ID:156]"
+  },
+  {
+    "id": "157",
+    "name": "SERVICIO DE IMAGENOLOGIA (NORTE 1 PISO) Area Cuarto De Cableado De Angiografo Phillips [TN-P1][ID:156]"
+  },
+  {
+    "id": "158",
+    "name": "SERVICIO DE ARCHIVO (SOTANO AUDITORIO) Area Archivo [TS-SA][ID:158]"
+  },
+  {
+    "id": "159",
+    "name": "SERVICIO VACUNACION (SUR 1 PISO) Nevera Vacunacion PAI [TS-P1][ID:159]"
+  },
+  {
+    "id": "160",
+    "name": "SERVICIO DE SISTEMAS (NORTE 3 PISO) (NORTE 4 PISO) Datacenter 3 Piso [TN-P3][ID:160]"
+  },
+  {
+    "id": "161",
+    "name": "SERVICIO DE SISTEMAS (NORTE 3 PISO) (NORTE 4 PISO) Datacenter 4 Piso [TN-P4][ID:161]"
+  },
+  {
+    "id": "162",
+    "name": "SERVICIO ENSAYOS CLINICOS (SOTANO) Refrigerador Doble Bodega Investigacion Farmacia [TS-S][ID:162]"
+  },
+  {
+    "id": "163",
+    "name": "SERVICIO ENSAYOS CLINICOS (SOTANO) Congelador Bodega Sotano Investigaciones [TS-S][ID:163]"
+  }
+]
