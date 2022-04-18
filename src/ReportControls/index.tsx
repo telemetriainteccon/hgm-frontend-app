@@ -68,7 +68,7 @@ function ReportControls() {
       );
       await creatPdf({ doc, elements });
       doc.setFontSize(40);
-      doc.save(`charts.pdf`);
+      doc.save(`reporte.pdf`);
       setIsExporting(false);
     }, 3000);
   }
