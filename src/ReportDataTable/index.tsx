@@ -27,7 +27,10 @@ function ReportDataTable() {
 
     const result = tableMatrix.map((items, index) => {
       return (
-        <table key={index} className="report-table table-bordered table-responsive">
+        <table
+          key={index}
+          className="report-table table-bordered table-responsive"
+        >
           <thead>
             <tr>
               <th>Fecha</th>
@@ -68,9 +71,9 @@ function ReportDataTable() {
                 .reduce(
                   (acum: string, v: any, i: number) =>
                     acum +
-                    `${
-                      acum !== "" ? "," : ""
-                    }${v.m.mean.toString()},${items[i].t.mean.toString()}`,
+                    `${acum !== "" ? "," : ""}${v.m.mean.toString()},${items[
+                      i
+                    ].t.mean.toString()}`,
                   ""
                 )
                 .split(",")
@@ -114,7 +117,12 @@ function ReportDataTable() {
         {/* {error && <label>Has Error!! {error}</label>} */}
         {/* {isLoading && <></>} */}
         {/* {!isLoading && !data && <label>Is Loading!!</label>} */}
-        {data.length !== 0 && sensorId!==0 && table }
+        {data.length !== 0 && sensorId !== 0 && (
+          <div>
+            <p className="lbl-tip">M (Mañana) T (Tarde)</p>
+            {table}
+          </div>
+        )}
       </section>
     </React.Fragment>
   );
