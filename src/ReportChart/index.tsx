@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ReportContext } from "../ReportContext";
 import "./ReportChart.css";
 
@@ -51,12 +51,12 @@ export const defaultData = {
 };
 
 export function ReportChart() {
-  const { data, isLoading, error, sensorId, sensorText } =
-    useContext(ReportContext);
+  const cx = useContext(ReportContext);
+
   const [chartData, setChartData] = useState(defaultData);
 
-  const loadChart = useCallback(() => {
-    const dates = data.data
+  const loadChart = () => {
+    const dates = cx.state.data
       .map((item: any) => item.date.substr(0, 2))
       .reduce(
         (acum: string, v: number, i: number) =>
@@ -65,12 +65,12 @@ export function ReportChart() {
       )
       .split(",");
 
-    const mmax = data.data.map((item: any) => parseFloat(item.m.max));
-    const mmean = data.data.map((item: any) => parseFloat(item.m.mean));
-    const mmin = data.data.map((item: any) => parseFloat(item.m.min));
-    const tmax = data.data.map((item: any) => parseFloat(item.t.max));
-    const tmean = data.data.map((item: any) => parseFloat(item.t.mean));
-    const tmin = data.data.map((item: any) => parseFloat(item.t.min));
+    const mmax = cx.state.data.map((item: any) => parseFloat(item.m.max));
+    const mmean = cx.state.data.map((item: any) => parseFloat(item.m.mean));
+    const mmin = cx.state.data.map((item: any) => parseFloat(item.m.min));
+    const tmax = cx.state.data.map((item: any) => parseFloat(item.t.max));
+    const tmean = cx.state.data.map((item: any) => parseFloat(item.t.mean));
+    const tmin = cx.state.data.map((item: any) => parseFloat(item.t.min));
 
     const max = mmax
       .reduce(
@@ -127,33 +127,40 @@ export function ReportChart() {
         },
       ],
     });
-  }, [data]);
+  };
 
   useEffect(() => {
-    if (data.length !== 0) {
+    if (cx.state.data.length !== 0) {
       loadChart();
     }
-  }, [data, loadChart]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cx.state.data]);
 
   return (
     <React.Fragment>
       <section className="chart" id="chart">
-        {error && <p className="alert-message"><b>Lo Sentimos se ha presentado un error {error} </b></p>}
-        {isLoading && (
+        {cx.state.error && (
+          <p className="alert-message">
+            <b>Lo Sentimos se ha presentado un error {cx.state.error} </b>
+          </p>
+        )}
+        {cx.state.isLoading && (
           <div className="loading">
             <LoadingChart></LoadingChart>
           </div>
         )}
-        {sensorId === 0 && !isLoading && !error && (
+        {cx.state.sensorId === 0 && !cx.state.isLoading && !cx.state.error && (
           <div>
             <img width={300} src={noResult} alt="No Results"></img>
-            <p className="alert-message"><b>Aun no has seleccionado un área </b></p>
+            <p className="alert-message">
+              <b>Aun no has seleccionado un área </b>
+            </p>
           </div>
         )}
-        {sensorId !== 0 && data.length !== 0 && (
+        {cx.state.sensorId !== 0 && cx.state.data.length !== 0 && (
           <div>
             <div className="report-title">
-              <h5>{sensorText} TEMPERATURA</h5>
+              <h5>{cx.state.sensorText} TEMPERATURA</h5>
               <label>
                 <b>Organización:</b> HOSPITAL GENERAL DE MEDELLÍN <b>Año:</b>{" "}
                 {new Date().getFullYear()}

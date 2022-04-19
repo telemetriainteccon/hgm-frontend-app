@@ -8,7 +8,7 @@ class ReportMmaService {
           `http://192.241.153.89:3001/api/v1/reports/report-mma/${sensorId}?minDate=${minDateISO}&maxDate=${maxDateISO}`
         )
         .then((res) => {
-          resolve(res);
+          resolve(res.data);
         })
         .catch((error) => {
           reject(error);

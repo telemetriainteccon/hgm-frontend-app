@@ -3,15 +3,15 @@ import { ReportContext } from "../ReportContext";
 import "./ReportDataTable.css";
 
 function ReportDataTable() {
-  const { data, sensorId } = useContext(ReportContext);
+  const cx = useContext(ReportContext);
   const [table, setTable] = useState(<></>);
 
   const loadTable = useCallback(() => {
     let tableMatrix = [];
     let tableArray = [];
 
-    for (let index = 0; index < data.data.length; index++) {
-      const element = data.data[index];
+    for (let index = 0; index < cx.state.data.length; index++) {
+      const element = cx.state.data[index];
 
       if (index !== 0 && index % 10 === 0) {
         tableMatrix.push(tableArray.map((x) => x));
@@ -103,23 +103,20 @@ function ReportDataTable() {
     });
 
     setTable(<div className="tables-result">{result}</div>);
-  }, [data, setTable]);
+  }, [cx.state.data, setTable]);
 
   useEffect(() => {
-    if (data.length !== 0) {
+    if (cx.state.data.length !== 0) {
       loadTable();
     }
-  }, [data, loadTable]);
+  }, [cx.state.data, loadTable]);
 
   return (
     <React.Fragment>
       <section>
-        {/* {error && <label>Has Error!! {error}</label>} */}
-        {/* {isLoading && <></>} */}
-        {/* {!isLoading && !data && <label>Is Loading!!</label>} */}
-        {data.length !== 0 && sensorId !== 0 && (
+        {cx.state.data.length !== 0 && cx.state.sensorId !== 0 && (
           <div>
-            <p className="lbl-tip">M (Mañana) T (Tarde)</p>
+            <p className="lbl-tip">M(Mañana) T(Tarde)</p>
             {table}
           </div>
         )}

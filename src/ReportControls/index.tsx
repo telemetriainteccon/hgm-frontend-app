@@ -1,57 +1,42 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "./ReportControls.css";
+
 import jsPDF from "jspdf";
 import * as htmlToImage from "html-to-image";
+import addDays from 'date-fns/addDays'
 
 import exportingImg from "./../Assets/exporting.gif";
-
 import { ReportContext } from "../ReportContext";
 import { ReportMmaService } from "../Services/reportMma.service";
 import sensors from "./../labels.json";
 
 function ReportControls() {
-  const {
-    setData,
-    sensorId,
-    setSensorId,
-    minDate,
-    setMinDate,
-    maxDate,
-    setMaxDate,
-    setIsLoading,
-    setError,
-    setSensorText,
-  } = useContext(ReportContext);
+  const cx = useContext(ReportContext);
 
-  const [isExporting, setIsExporting] = useState(false);
-
-  const getData = useCallback(() => {
-    setIsLoading(true);
-    setError(false);
-    setData([]);
-
-    try {
-      new ReportMmaService()
-        .getReporMma(sensorId, minDate, maxDate)
-        .then((result: any) => {
-          setIsLoading(false);
-          setData(result);
-        })
-        .catch((error) => {
-          setIsLoading(false);
-          setError(error.toString());
-          setData([]);
-        });
-    } catch (error) {
-      setIsLoading(false);
-      setError(error);
-      setData([]);
+  const getData = () => {
+    if (cx.state.sensorId !== 0) {
+      try {
+        cx.onLoading();
+        new ReportMmaService()
+          .getReporMma(cx.state.sensorId, cx.state.minDate, cx.state.maxDate)
+          .then((result) => {
+            cx.onCompleted({ data: result });
+          })
+          .catch((error) => {
+            cx.onError();
+          });
+      } catch (error) {
+        cx.onError();
+      }
+    } else {
+      cx.onEmpty();
     }
-  }, [sensorId, minDate, maxDate, setData, setIsLoading, setError]);
+  };
 
   useEffect(() => {
     getData();
-  }, [sensorId, minDate, maxDate, getData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cx.state.sensorId, cx.state.minDate, cx.state.maxDate]);
 
   const sensorList = sensors.map((sensor, index) => (
     <option key={index} value={sensor.id}>
@@ -60,7 +45,8 @@ function ReportControls() {
   ));
 
   async function exportChartToPdf() {
-    setIsExporting(true);
+    cx.onExporting();
+
     setTimeout(async () => {
       const doc = new jsPDF("p", "px", "a4");
       const elements: any = document.getElementsByClassName(
@@ -69,7 +55,8 @@ function ReportControls() {
       await creatPdf({ doc, elements });
       doc.setFontSize(40);
       doc.save(`reporte.pdf`);
-      setIsExporting(false);
+
+      cx.onCompleted();
     }, 3000);
   }
 
@@ -120,7 +107,7 @@ function ReportControls() {
 
   return (
     <React.Fragment>
-      {isExporting && (
+      {cx.state.isExporting && (
         <div>
           <div className="exporting"></div>
           <div className="exporting-content">
@@ -139,54 +126,72 @@ function ReportControls() {
               type="button"
               className="btn btn-sm btn-primary"
               onClick={() => exportChartToPdf()}
-              disabled={sensorId === 0}
+              disabled={cx.state.sensorId === 0}
             >
               Exportar
             </button>
             <select
               className="selSensors"
-              onChange={(el) => {
-                setSensorText(el.target.options[el.target.selectedIndex].text);
-                setSensorId(parseInt(el.target.value));
-              }}
+              onChange={(el) =>
+                cx.onChange({
+                  sensorId: parseInt(el.target.value),
+                  sensorText: el.target.options[el.target.selectedIndex].text,
+                })
+              }
             >
               {sensorList}
             </select>
 
             <input
-              onChange={(el) =>
-                setMinDate(
-                  new Date(new Date(el.target.value).setHours(24)).toISOString()
-                )
-              }
+              onChange={(el) => {
+                const days =  3;//cx.state.dayRange;
+
+                console.log(days, cx);
+                console.log(addDays(new Date(el.target.value), 10));
+
+                return cx.onChange({
+                  minDate: new Date(
+                    new Date(el.target.value).setHours(24)
+                  ).toISOString(),
+                  maxDate: addDays(new Date(el.target.value).setHours(24), cx.state.dayRange).toISOString()
+                });
+              }}
               type="date"
               id="start"
               name="min-date"
-              value={minDate.substring(0, 10)}
-              max={maxDate.substring(0, 10)}
-              min={new Date(
-                new Date(maxDate).setDate(new Date(maxDate).getDate() - 31)
-              )
-                .toISOString()
-                .substring(0, 10)}
+              value={cx.state.minDate.substring(0, 10)}
+              max={new Date().toISOString().substring(0, 10)}
             />
-            <input
+
+            {/* <input
               onChange={(el) =>
-                setMaxDate(
-                  new Date(new Date(el.target.value).setHours(24)).toISOString()
-                )
+                cx.onChange({
+                  maxDate: new Date(
+                    new Date(el.target.value).setHours(24)
+                  ).toISOString(),
+                })
               }
               type="date"
               id="end"
               name="max-date"
-              value={maxDate.substring(0, 10)}
-              min={minDate.substring(0, 10)}
-              max={new Date(
-                new Date().setDate(new Date(minDate).getDate() + 31)
-              )
-                .toISOString()
-                .substring(0, 10)}
-            ></input>
+              value={cx.state.maxDate.substring(0, 10)}
+              max={new Date().toISOString().substring(0, 10)}
+            ></input> */}
+
+            <select
+              defaultValue={cx.state.dayRange}
+              className="selRange"
+              onChange={(el) => {
+                return cx.onChange({
+                  maxDate: addDays(new Date(cx.state.minDate), parseInt(el.target.value)).toISOString(),
+                  dayRange: parseInt(el.target.value)
+                });
+              }}
+            >
+              <option value={30}> Mensual </option>
+              <option value={15}>Quinsenal</option>
+              <option value={7}>Semanal</option>
+            </select>
           </div>
         </div>
       </div>
