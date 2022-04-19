@@ -116,7 +116,7 @@ function ReportDataTable() {
       <section>
         {cx.state.data.length !== 0 && cx.state.sensorId !== 0 && (
           <div>
-            <p className="lbl-tip">M(Mañana) T(Tarde)</p>
+            <p className="lbl-tip">M (Mañana) T (Tarde)</p>
             {table}
           </div>
         )}
