@@ -5,7 +5,7 @@
 
 .selSensors {
     width: 100%;
-    max-width: 550px;
+    max-width: 650px;
 }
 
 .exporting {
@@ -23,4 +23,9 @@
     background-color: white;
     z-index: 999;
     border-radius: 50;
+  }
+
+  .h2 {
+    font-family: fantasy;
+    color: gray;
   }

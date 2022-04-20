@@ -122,14 +122,6 @@ function ReportControls() {
         <h1 className="h2">Reporte Invima</h1>
         <div className="btn-toolbar mb-2 mb-md-0">
           <div className="btn-group me-2">
-            <button
-              type="button"
-              className="btn btn-sm btn-primary"
-              onClick={() => exportChartToPdf()}
-              disabled={cx.state.sensorId === 0}
-            >
-              Exportar
-            </button>
             <select
               className="selSensors"
               onChange={(el) =>
@@ -144,11 +136,6 @@ function ReportControls() {
 
             <input
               onChange={(el) => {
-                const days =  3;//cx.state.dayRange;
-
-                console.log(days, cx);
-                console.log(addDays(new Date(el.target.value), 10));
-
                 return cx.onChange({
                   minDate: new Date(
                     new Date(el.target.value).setHours(24)
@@ -162,22 +149,6 @@ function ReportControls() {
               value={cx.state.minDate.substring(0, 10)}
               max={new Date().toISOString().substring(0, 10)}
             />
-
-            {/* <input
-              onChange={(el) =>
-                cx.onChange({
-                  maxDate: new Date(
-                    new Date(el.target.value).setHours(24)
-                  ).toISOString(),
-                })
-              }
-              type="date"
-              id="end"
-              name="max-date"
-              value={cx.state.maxDate.substring(0, 10)}
-              max={new Date().toISOString().substring(0, 10)}
-            ></input> */}
-
             <select
               defaultValue={cx.state.dayRange}
               className="selRange"
@@ -189,9 +160,17 @@ function ReportControls() {
               }}
             >
               <option value={30}> Mensual </option>
-              <option value={15}>Quinsenal</option>
+              <option value={15}>Quincenal</option>
               <option value={7}>Semanal</option>
             </select>
+            <button
+              type="button"
+              className="btn btn-sm btn-primary"
+              onClick={() => exportChartToPdf()}
+              disabled={cx.state.sensorId === 0}
+            >
+              Exportar
+            </button>
           </div>
         </div>
       </div>
