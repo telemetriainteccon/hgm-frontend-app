@@ -151,7 +151,7 @@ export function ReportChart() {
         )}
         {cx.state.sensorId === 0 && !cx.state.isLoading && !cx.state.error && (
           <div>
-            <img width={300} src={noResult} alt="No Results"></img>
+            <img width={200} src={noResult} alt="No Results"></img>
             <p className="alert-message">
               <b>Aun no has seleccionado un área </b>
             </p>
@@ -166,13 +166,7 @@ export function ReportChart() {
                 {new Date().getFullYear()}
               </label>
             </div>
-            <Line
-              height={125}
-              width={400}
-              className="line"
-              options={options}
-              data={chartData}
-            />
+            <Line height={125} width={400} options={options} data={chartData} />
           </div>
         )}
       </section>
