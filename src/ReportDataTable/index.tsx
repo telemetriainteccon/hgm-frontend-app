@@ -13,7 +13,7 @@ function ReportDataTable() {
     for (let index = 0; index < cx.state.data.length; index++) {
       const element = cx.state.data[index];
 
-      if (index !== 0 && index % 10 === 0) {
+      if (index !== 0 && index % 12 === 0) {
         tableMatrix.push(tableArray.map((x) => x));
         tableArray = [];
       }

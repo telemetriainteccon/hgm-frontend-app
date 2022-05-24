@@ -3,12 +3,24 @@ import "./ReportControls.css";
 
 import jsPDF from "jspdf";
 import * as htmlToImage from "html-to-image";
-import addDays from 'date-fns/addDays'
+import addDays from "date-fns/addDays";
 
 import exportingImg from "./../Assets/exporting.gif";
 import { ReportContext } from "../ReportContext";
 import { ReportMmaService } from "../Services/reportMma.service";
 import sensors from "./../labels.json";
+
+import { CSVLink } from "react-csv";
+
+const headers = [
+  { label: "Fecha", key: "date" },
+  { label: "Mañana-Minimo", key: "m.min" },
+  { label: "Mañana-Actual", key: "m.mean" },
+  { label: "Mañana-Maximo", key: "m.max" },
+  { label: "Tarde-Minimo", key: "t.min" },
+  { label: "Tarde-Actual", key: "t.mean" },
+  { label: "Tarde-Maximo", key: "t.max" },
+];
 
 function ReportControls() {
   const cx = useContext(ReportContext);
@@ -57,7 +69,7 @@ function ReportControls() {
       doc.save(`reporte.pdf`);
 
       cx.onCompleted();
-    }, 3000);
+    }, 0);
   }
 
   async function creatPdf({
@@ -111,7 +123,7 @@ function ReportControls() {
         <div>
           <div className="exporting"></div>
           <div className="exporting-content">
-            <img width={350} src={exportingImg} alt="Exporting"></img>
+            <img width={150} src={exportingImg} alt="Exporting"></img>
             <p>
               <b>Exportando PDF!</b>
             </p>
@@ -119,7 +131,7 @@ function ReportControls() {
         </div>
       )}
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 className="h2">Reporte Invima</h1>
+        <label></label>
         <div className="btn-toolbar mb-2 mb-md-0">
           <div className="btn-group me-2">
             <select
@@ -133,14 +145,16 @@ function ReportControls() {
             >
               {sensorList}
             </select>
-
             <input
               onChange={(el) => {
                 return cx.onChange({
                   minDate: new Date(
                     new Date(el.target.value).setHours(24)
                   ).toISOString(),
-                  maxDate: addDays(new Date(el.target.value).setHours(24), cx.state.dayRange).toISOString()
+                  maxDate: addDays(
+                    new Date(el.target.value).setHours(24),
+                    cx.state.dayRange
+                  ).toISOString(),
                 });
               }}
               type="date"
@@ -154,8 +168,11 @@ function ReportControls() {
               className="selRange"
               onChange={(el) => {
                 return cx.onChange({
-                  maxDate: addDays(new Date(cx.state.minDate), parseInt(el.target.value)).toISOString(),
-                  dayRange: parseInt(el.target.value)
+                  maxDate: addDays(
+                    new Date(cx.state.minDate),
+                    parseInt(el.target.value)
+                  ).toISOString(),
+                  dayRange: parseInt(el.target.value),
                 });
               }}
             >
@@ -163,14 +180,39 @@ function ReportControls() {
               <option value={15}>Quincenal</option>
               <option value={7}>Semanal</option>
             </select>
-            <button
-              type="button"
-              className="btn btn-sm btn-primary"
-              onClick={() => exportChartToPdf()}
-              disabled={cx.state.sensorId === 0}
+            <select
+              defaultValue={cx.state.downloadType}
+              onChange={(el) => {
+                return cx.onChange({
+                  downloadType: parseInt(el.target.value),
+                });
+              }}
             >
-              Exportar
-            </button>
+              <option value={1}>PDF</option>
+              <option value={2}>Excel</option>
+            </select>
+
+            {cx.state.downloadType === 1 && (
+              <button
+                type="button"
+                className="btn btn-sm btn-primary"
+                onClick={() => exportChartToPdf()}
+                disabled={cx.state.sensorId === 0}
+              >
+                Exportar
+              </button>
+            )}
+
+            {cx.state.downloadType === 2 && (
+              <CSVLink
+                className="btn btn-sm btn-primary"
+                data={cx.state.data}
+                headers={headers}
+                filename={"reporte-invima.csv"}
+              >
+                Exportar
+              </CSVLink>
+            )}
           </div>
         </div>
       </div>

@@ -1,31 +1,26 @@
 .controls {
-    width: 100%;
-    max-width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .selSensors {
-    width: 100%;
-    max-width: 650px;
+  width: 100%;
+  max-width: 650px;
 }
 
 .exporting {
-    position: fixed;
-    background: black;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    opacity: 70%;
-  }
-  
-  .exporting-content {
-    margin: 10px;
-    position: fixed;
-    background-color: white;
-    z-index: 999;
-    border-radius: 50;
-  }
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 70%;
+}
 
-  .h2 {
-    font-family: fantasy;
-    color: gray;
-  }
+.exporting-content {
+  margin: 10px;
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+  border-radius: 50;
+}

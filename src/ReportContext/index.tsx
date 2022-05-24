@@ -8,6 +8,7 @@ const initialState = {
   sensorId: 0,
   sensorText: "",
   dayRange: 30,
+  downloadType: 1,
   minDate: new Date(
     new Date(new Date().getFullYear(), new Date().getMonth(), 1).setHours(10)
   ).toISOString(),

@@ -1,36 +1,37 @@
-.report-table{
-    margin-top: 30px;
-    /* width: 100%; */
-    max-width: 1040px;
-    text-align: center;
+.report-table {
+  margin-top: 15px;
+  /* width: 100%; */
+  max-width: 1040px;
+  text-align: center;
 }
 
-.report-table, th, td {
-    border: 1px solid black;
-    font-size: 14px;
-  }
+.report-table,
+th,
+td {
+  border: 1px solid black;
+  font-size: 14px;
+}
 
-  .report-table th {
-    border: 1px solid black;
-    padding: 5px;
-    color: black;
-    font-weight: bold;
-    font-size: 12px;
-  }
+.report-table th {
+  border: 1px solid black;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+}
 
-  .lbl-tip {
-    text-align: -webkit-left;
-    padding-top: 15px;
-    padding-left: 85px;
-    font-weight: bold;
-    font-size: 14px;
-  }
+.lbl-tip {
+  text-align: -webkit-left;
+  padding-top: 15px;
+  padding-left: 85px;
+  font-weight: bold;
+  font-size: 14px;
+}
 
-  .tables-result {
-    overflow-x: scroll;
-  }
+.tables-result {
+  overflow-x: scroll;
+}
 
-  ::-webkit-scrollbar {
-    width: 3px;
-  }
-  
+::-webkit-scrollbar {
+  width: 3px;
+}

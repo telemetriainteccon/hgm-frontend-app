@@ -141,7 +141,7 @@ export function ReportChart() {
       <section className="chart" id="chart">
         {cx.state.error && (
           <p className="alert-message">
-            <b>Lo Sentimos se ha presentado un error {cx.state.error} </b>
+            <b>Lo sentimos se ha presentado un error {cx.state.error} </b>
           </p>
         )}
         {cx.state.isLoading && (
