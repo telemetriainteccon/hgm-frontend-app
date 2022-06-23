@@ -39,7 +39,7 @@ function ReportDataTable() {
               ))}
             </tr>
             <tr>
-              <th>Temperatura</th>
+              <th>{cx.state.sensorType === "T" ? "Temperatura" : "Humedad"}</th>
               {items.map((x: any) => (
                 <>
                   <th scope="col">M</th>
@@ -103,7 +103,7 @@ function ReportDataTable() {
     });
 
     setTable(<div className="tables-result">{result}</div>);
-  }, [cx.state.data, setTable]);
+  }, [cx.state.data, cx.state.sensorType, setTable]);
 
   useEffect(() => {
     if (cx.state.data.length !== 0) {

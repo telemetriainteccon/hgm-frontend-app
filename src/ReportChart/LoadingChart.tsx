@@ -3,84 +3,74 @@ import ContentLoader from "react-content-loader";
 
 const LoadingChart = (props: any) => (
   <ContentLoader width={200} height={200} viewBox="0 0 200 200" {...props}>
-  <rect x="0" y="160" rx="0" ry="0" width="25" height="40" />
-  <rect x="30" y="145" rx="0" ry="0" width="25" height="55" />
-  <rect x="60" y="126" rx="0" ry="0" width="25" height="74" />
-  <rect x="90" y="80" rx="0" ry="0" width="25" height="120" />
-  <rect x="120" y="142" rx="0" ry="0" width="25" height="58" />
-</ContentLoader>
+    <rect x="0" y="160" rx="0" ry="0" width="25" height="40" />
+    <rect x="30" y="145" rx="0" ry="0" width="25" height="55" />
+    <rect x="60" y="126" rx="0" ry="0" width="25" height="74" />
+    <rect x="90" y="80" rx="0" ry="0" width="25" height="120" />
+    <rect x="120" y="142" rx="0" ry="0" width="25" height="58" />
+  </ContentLoader>
 );
 
 const LoadingTable = (props: any) => (
   <ContentLoader
-    width={1200}
-    height={900}
+    // width={1200}
+    // height={900}
     viewBox="0 0 1200 900"
     backgroundColor="#eaeced"
     foregroundColor="#ffffff"
     {...props}
   >
-    <rect x="68" y="37" rx="3" ry="3" width="298" height="129" />
-    <rect x="426" y="37" rx="3" ry="3" width="298" height="129" />
-    <rect x="786" y="37" rx="3" ry="3" width="298" height="129" />
-    <rect x="104" y="217" rx="3" ry="3" width="578" height="42" />
-    <rect x="123" y="308" rx="3" ry="3" width="906" height="17" />
-    <circle cx="951" cy="386" r="11" />
-    <circle cx="986" cy="386" r="11" />
-    <rect x="176" y="378" rx="3" ry="3" width="141" height="15" />
-    <rect x="377" y="377" rx="3" ry="3" width="299" height="15" />
-    <rect x="733" y="377" rx="3" ry="3" width="141" height="15" />
-    <rect x="127" y="418" rx="3" ry="3" width="897" height="2" />
-    <circle cx="952" cy="447" r="11" />
-    <circle cx="987" cy="447" r="11" />
-    <rect x="177" y="439" rx="3" ry="3" width="141" height="15" />
-    <rect x="378" y="438" rx="3" ry="3" width="299" height="15" />
-    <rect x="734" y="438" rx="3" ry="3" width="141" height="15" />
-    <rect x="128" y="479" rx="3" ry="3" width="897" height="2" />
-    <circle cx="953" cy="505" r="11" />
-    <circle cx="988" cy="505" r="11" />
-    <rect x="178" y="497" rx="3" ry="3" width="141" height="15" />
-    <rect x="379" y="496" rx="3" ry="3" width="299" height="15" />
-    <rect x="735" y="496" rx="3" ry="3" width="141" height="15" />
-    <rect x="129" y="537" rx="3" ry="3" width="897" height="2" />
-    <circle cx="954" cy="566" r="11" />
-    <circle cx="989" cy="566" r="11" />
-    <rect x="179" y="558" rx="3" ry="3" width="141" height="15" />
-    <rect x="380" y="557" rx="3" ry="3" width="299" height="15" />
-    <rect x="736" y="557" rx="3" ry="3" width="141" height="15" />
-    <rect x="130" y="598" rx="3" ry="3" width="897" height="2" />
-    <circle cx="953" cy="626" r="11" />
-    <circle cx="988" cy="626" r="11" />
-    <rect x="178" y="618" rx="3" ry="3" width="141" height="15" />
-    <rect x="379" y="617" rx="3" ry="3" width="299" height="15" />
-    <rect x="735" y="617" rx="3" ry="3" width="141" height="15" />
-    <rect x="129" y="658" rx="3" ry="3" width="897" height="2" />
-    <circle cx="954" cy="687" r="11" />
-    <circle cx="989" cy="687" r="11" />
-    <rect x="179" y="679" rx="3" ry="3" width="141" height="15" />
-    <rect x="380" y="678" rx="3" ry="3" width="299" height="15" />
-    <rect x="736" y="678" rx="3" ry="3" width="141" height="15" />
-    <rect x="127" y="716" rx="3" ry="3" width="897" height="2" />
-    <rect x="123" y="312" rx="3" ry="3" width="2" height="465" />
-    <rect x="1027" y="312" rx="3" ry="3" width="2" height="465" />
-    <circle cx="954" cy="747" r="11" />
-    <circle cx="989" cy="747" r="11" />
-    <rect x="179" y="739" rx="3" ry="3" width="141" height="15" />
-    <rect x="380" y="738" rx="3" ry="3" width="299" height="15" />
-    <rect x="736" y="738" rx="3" ry="3" width="141" height="15" />
-    <rect x="127" y="776" rx="3" ry="3" width="897" height="2" />
-    <rect x="124" y="343" rx="3" ry="3" width="906" height="17" />
-    <rect x="125" y="320" rx="3" ry="3" width="68" height="33" />
-    <rect x="294" y="317" rx="3" ry="3" width="149" height="33" />
-    <rect x="616" y="318" rx="3" ry="3" width="137" height="33" />
-    <rect x="854" y="319" rx="3" ry="3" width="72" height="33" />
-    <rect x="1005" y="317" rx="3" ry="3" width="22" height="33" />
-    <circle cx="743" cy="237" r="20" />
-    <rect x="739" y="217" rx="0" ry="0" width="67" height="40" />
-    <circle cx="802" cy="237" r="20" />
-    <circle cx="890" cy="238" r="20" />
-    <rect x="890" y="218" rx="0" ry="0" width="140" height="40" />
-    <circle cx="1032" cy="238" r="20" />
+    <rect x="51" y="45" rx="3" ry="3" width="906" height="17" />
+    <circle cx="879" cy="123" r="11" />
+    <circle cx="914" cy="123" r="11" />
+    <rect x="104" y="115" rx="3" ry="3" width="141" height="15" />
+    <rect x="305" y="114" rx="3" ry="3" width="299" height="15" />
+    <rect x="661" y="114" rx="3" ry="3" width="141" height="15" />
+    <rect x="55" y="155" rx="3" ry="3" width="897" height="2" />
+    <circle cx="880" cy="184" r="11" />
+    <circle cx="915" cy="184" r="11" />
+    <rect x="105" y="176" rx="3" ry="3" width="141" height="15" />
+    <rect x="306" y="175" rx="3" ry="3" width="299" height="15" />
+    <rect x="662" y="175" rx="3" ry="3" width="141" height="15" />
+    <rect x="56" y="216" rx="3" ry="3" width="897" height="2" />
+    <circle cx="881" cy="242" r="11" />
+    <circle cx="916" cy="242" r="11" />
+    <rect x="106" y="234" rx="3" ry="3" width="141" height="15" />
+    <rect x="307" y="233" rx="3" ry="3" width="299" height="15" />
+    <rect x="663" y="233" rx="3" ry="3" width="141" height="15" />
+    <rect x="57" y="274" rx="3" ry="3" width="897" height="2" />
+    <circle cx="882" cy="303" r="11" />
+    <circle cx="917" cy="303" r="11" />
+    <rect x="107" y="295" rx="3" ry="3" width="141" height="15" />
+    <rect x="308" y="294" rx="3" ry="3" width="299" height="15" />
+    <rect x="664" y="294" rx="3" ry="3" width="141" height="15" />
+    <rect x="58" y="335" rx="3" ry="3" width="897" height="2" />
+    <circle cx="881" cy="363" r="11" />
+    <circle cx="916" cy="363" r="11" />
+    <rect x="106" y="355" rx="3" ry="3" width="141" height="15" />
+    <rect x="307" y="354" rx="3" ry="3" width="299" height="15" />
+    <rect x="663" y="354" rx="3" ry="3" width="141" height="15" />
+    <rect x="57" y="395" rx="3" ry="3" width="897" height="2" />
+    <circle cx="882" cy="424" r="11" />
+    <circle cx="917" cy="424" r="11" />
+    <rect x="107" y="416" rx="3" ry="3" width="141" height="15" />
+    <rect x="308" y="415" rx="3" ry="3" width="299" height="15" />
+    <rect x="664" y="415" rx="3" ry="3" width="141" height="15" />
+    <rect x="55" y="453" rx="3" ry="3" width="897" height="2" />
+    <rect x="51" y="49" rx="3" ry="3" width="2" height="465" />
+    <rect x="955" y="49" rx="3" ry="3" width="2" height="465" />
+    <circle cx="882" cy="484" r="11" />
+    <circle cx="917" cy="484" r="11" />
+    <rect x="107" y="476" rx="3" ry="3" width="141" height="15" />
+    <rect x="308" y="475" rx="3" ry="3" width="299" height="15" />
+    <rect x="664" y="475" rx="3" ry="3" width="141" height="15" />
+    <rect x="55" y="513" rx="3" ry="3" width="897" height="2" />
+    <rect x="52" y="80" rx="3" ry="3" width="906" height="17" />
+    <rect x="53" y="57" rx="3" ry="3" width="68" height="33" />
+    <rect x="222" y="54" rx="3" ry="3" width="149" height="33" />
+    <rect x="544" y="55" rx="3" ry="3" width="137" height="33" />
+    <rect x="782" y="56" rx="3" ry="3" width="72" height="33" />
+    <rect x="933" y="54" rx="3" ry="3" width="24" height="33" />
   </ContentLoader>
 );
 

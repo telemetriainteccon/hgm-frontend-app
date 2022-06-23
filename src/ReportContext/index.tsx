@@ -5,6 +5,8 @@ const ReportContext = React.createContext<any>();
 
 const initialState = {
   data: [],
+  sensorType: "T",
+  reportType: 1,
   sensorId: 0,
   sensorText: "",
   dayRange: 30,

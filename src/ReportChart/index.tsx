@@ -160,7 +160,10 @@ export function ReportChart() {
         {cx.state.sensorId !== 0 && cx.state.data.length !== 0 && (
           <div>
             <div className="report-title">
-              <h5>{cx.state.sensorText} TEMPERATURA</h5>
+              <h5>
+                {cx.state.sensorText}{" "}
+                {cx.state.sensorType === "T" ? "TEMPERATURA" : "HUMEDAD"}
+              </h5>
               <label>
                 <b>Organización:</b> HOSPITAL GENERAL DE MEDELLÍN <b>Año:</b>{" "}
                 {new Date().getFullYear()}

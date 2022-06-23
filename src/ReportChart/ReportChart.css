@@ -1,34 +1,34 @@
 #chart {
-    width: 100%;
-    max-width: 1000px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .skeleton {
-    width: 100%;
-    max-width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
-.loading-chart{
-    width: 150px;
-    opacity: 0.5;
+.loading-chart {
+  width: 150px;
+  opacity: 0.5;
 }
 
 .chart-loading-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 300px;
 }
 
 .report-title {
-    padding-bottom: 40px;
+  padding-bottom: 0px;
 }
 
 .loading {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .alert-message {
-    color: red;
-    padding-bottom: 30px;
-    font-size: 14px;
+  color: red;
+  padding-bottom: 30px;
+  font-size: 14px;
 }

@@ -7,20 +7,11 @@ import addDays from "date-fns/addDays";
 
 import exportingImg from "./../Assets/exporting.gif";
 import { ReportContext } from "../ReportContext";
-import { ReportMmaService } from "../Services/reportMma.service";
-import sensors from "./../labels.json";
+import { ReportsService } from "../Services/reports.service";
+import sensors from "../Assets/Files/labels.json";
 
-import { CSVLink } from "react-csv";
-
-const headers = [
-  { label: "Fecha", key: "date" },
-  { label: "Mañana-Minimo", key: "m.min" },
-  { label: "Mañana-Actual", key: "m.mean" },
-  { label: "Mañana-Maximo", key: "m.max" },
-  { label: "Tarde-Minimo", key: "t.min" },
-  { label: "Tarde-Actual", key: "t.mean" },
-  { label: "Tarde-Maximo", key: "t.max" },
-];
+import ExportCSV from "../ExportCSV/ExportCSV";
+import { flatten } from "flat";
 
 function ReportControls() {
   const cx = useContext(ReportContext);
@@ -29,9 +20,15 @@ function ReportControls() {
     if (cx.state.sensorId !== 0) {
       try {
         cx.onLoading();
-        new ReportMmaService()
-          .getReporMma(cx.state.sensorId, cx.state.minDate, cx.state.maxDate)
-          .then((result) => {
+
+        new ReportsService()
+          .getReporMma(
+            cx.state.sensorId,
+            cx.state.minDate,
+            cx.state.maxDate,
+            cx.state.sensorType
+          )
+          .then((result: any) => {
             cx.onCompleted({ data: result });
           })
           .catch((error) => {
@@ -48,7 +45,13 @@ function ReportControls() {
   useEffect(() => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cx.state.sensorId, cx.state.minDate, cx.state.maxDate]);
+  }, [
+    cx.state.sensorId,
+    cx.state.minDate,
+    cx.state.maxDate,
+    cx.state.sensorType,
+    cx.state.reportType,
+  ]);
 
   const sensorList = sensors.map((sensor, index) => (
     <option key={index} value={sensor.id}>
@@ -57,19 +60,13 @@ function ReportControls() {
   ));
 
   async function exportChartToPdf() {
-    cx.onExporting();
-
-    setTimeout(async () => {
-      const doc = new jsPDF("p", "px", "a4");
-      const elements: any = document.getElementsByClassName(
-        "report-container-export"
-      );
-      await creatPdf({ doc, elements });
-      doc.setFontSize(40);
-      doc.save(`reporte.pdf`);
-
-      cx.onCompleted();
-    }, 0);
+    const doc = new jsPDF("p", "px", "a4");
+    const elements: any = document.getElementsByClassName(
+      "report-container-export"
+    );
+    await creatPdf({ doc, elements });
+    doc.setFontSize(40);
+    doc.save(`reporte.pdf`);
   }
 
   async function creatPdf({
@@ -117,6 +114,23 @@ function ReportControls() {
     }
   }
 
+  const wscols = [
+    { wch: 10 },
+    { wch: 25 },
+    { wch: 10 },
+    { wch: 25 },
+    { wch: 10 },
+    { wch: 25 },
+    { wch: 15 },
+    { wch: 25 },
+    { wch: 15 },
+    { wch: 25 },
+    { wch: 15 },
+    { wch: 25 },
+    { wch: 15 },
+    { wch: 15 },
+  ];
+
   return (
     <React.Fragment>
       {cx.state.isExporting && (
@@ -133,7 +147,18 @@ function ReportControls() {
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <label></label>
         <div className="btn-toolbar mb-2 mb-md-0">
-          <div className="btn-group me-2">
+          <div className="btn-group me-2" style={{ display: "inline" }}>
+            <select
+              defaultValue={cx.state.reportType}
+              onChange={(el) => {
+                return cx.onChange({
+                  reportType: parseInt(el.target.value),
+                });
+              }}
+            >
+              <option value={1}>Reporte Gráfico 1</option>
+              <option value={2}>Reporte 2</option>
+            </select>
             <select
               className="selSensors"
               onChange={(el) =>
@@ -144,6 +169,17 @@ function ReportControls() {
               }
             >
               {sensorList}
+            </select>
+            <select
+              defaultValue={cx.state.sensorType}
+              onChange={(el) => {
+                return cx.onChange({
+                  sensorType: el.target.value,
+                });
+              }}
+            >
+              <option value="T">Temperatura</option>
+              <option value="H">Humedad</option>
             </select>
             <input
               onChange={(el) => {
@@ -161,25 +197,29 @@ function ReportControls() {
               id="start"
               name="min-date"
               value={cx.state.minDate.substring(0, 10)}
-              max={new Date().toISOString().substring(0, 10)}
+              max={cx.state.maxDate.substring(0, 10)}
+              style={{ height: 25 }}
             />
-            <select
-              defaultValue={cx.state.dayRange}
-              className="selRange"
-              onChange={(el) => {
-                return cx.onChange({
-                  maxDate: addDays(
-                    new Date(cx.state.minDate),
-                    parseInt(el.target.value)
+            <input
+              onChange={(el) =>
+                cx.onChange({
+                  maxDate: new Date(
+                    new Date(el.target.value).setHours(24)
                   ).toISOString(),
-                  dayRange: parseInt(el.target.value),
-                });
-              }}
-            >
-              <option value={30}> Mensual </option>
-              <option value={15}>Quincenal</option>
-              <option value={7}>Semanal</option>
-            </select>
+                })
+              }
+              type="date"
+              id="end"
+              name="max-date"
+              value={cx.state.maxDate.substring(0, 10)}
+              min={cx.state.minDate.substring(0, 10)}
+              max={new Date(
+                new Date().setDate(new Date(cx.state.minDate).getDate() + 31)
+              )
+                .toISOString()
+                .substring(0, 10)}
+              style={{ height: 25 }}
+            ></input>
             <select
               defaultValue={cx.state.downloadType}
               onChange={(el) => {
@@ -204,14 +244,39 @@ function ReportControls() {
             )}
 
             {cx.state.downloadType === 2 && (
-              <CSVLink
-                className="btn btn-sm btn-primary"
-                data={cx.state.data}
-                headers={headers}
-                filename={"reporte-invima.csv"}
-              >
-                Exportar
-              </CSVLink>
+              <>
+                {/* <CSVLink
+                  className="btn btn-sm btn-primary"
+                  data={cx.state.data}
+                  headers={cx.state.reportType === 1 ? headers : headers2}
+                  filename={"reporte-invima.csv"}
+                >
+                  Exportar
+                </CSVLink> */}
+                <ExportCSV
+                  csvData={cx.state.data.map((e: any) => {
+                    const data: any = flatten(e);
+                    return {
+                      columnA: data["date"],
+                      columnB: data["f.timeMax"],
+                      columnC: data["f.max"],
+                      columnD: data["f.timeMin"],
+                      columnE: data["f.min"],
+                      columnF: data["m.timeMax"],
+                      columnG: data["m.max"],
+                      columnH: data["m.timeMin"],
+                      columnI: data["m.min"],
+                      columnJ: data["t.timeMax"],
+                      columnK: data["t.max"],
+                      columnL: data["t.timeMin"],
+                      columnM: data["t.min"],
+                      columnN: data["f.mean"],
+                    };
+                  })}
+                  fileName="ReporteMaxMin"
+                  wscols={wscols}
+                />
+              </>
             )}
           </div>
         </div>
